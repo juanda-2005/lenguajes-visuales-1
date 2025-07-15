@@ -1,0 +1,59 @@
+<Window x:Class="TallerApp.Views.TrabajoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestión de Trabajo" Height="500" Width="550"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Name="lblTitulo" Text="NUEVO TRABAJO" 
+                   FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="2" Text="Descripción:" FontWeight="Bold"/>
+        <TextBox Grid.Row="3" Name="txtDescripcion" Height="60" Margin="0,5,0,0"
+                 TextWrapping="Wrap" AcceptsReturn="True"/>
+
+        <TextBlock Grid.Row="5" Text="Precio:" FontWeight="Bold"/>
+        <TextBox Grid.Row="6" Name="txtPrecio" Height="25" Margin="0,5,0,0"/>
+
+        <TextBlock Grid.Row="8" Text="Fecha Inicio:" FontWeight="Bold"/>
+        <DatePicker Grid.Row="9" Name="dpFechaInicio" Height="25" Margin="0,5,0,0"/>
+
+        <TextBlock Grid.Row="11" Text="Fecha Fin:" FontWeight="Bold"/>
+        <DatePicker Grid.Row="12" Name="dpFechaFin" Height="25" Margin="0,5,0,0"/>
+
+        <TextBlock Grid.Row="14" Text="Camión:" FontWeight="Bold"/>
+        <ComboBox Grid.Row="15" Name="cbCamion" Height="25" Margin="0,5,0,0"
+                  DisplayMemberPath="DisplayText" SelectedValuePath="Id"/>
+
+        <StackPanel Grid.Row="17" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="btnGuardar" Content="Guardar" Width="120" Height="30" 
+                    Margin="5" Click="btnGuardar_Click" Background="LightGreen"/>
+            <Button Name="btnCancelar" Content="Cancelar" Width="120" Height="30" 
+                    Margin="5" Click="btnCancelar_Click"/>
+        </StackPanel>
+
+        <TextBlock Grid.Row="18" Name="lblMensaje" Foreground="Red" 
+                   HorizontalAlignment="Center" Margin="0,10,0,0"/>
+    </Grid>
+</Window>
